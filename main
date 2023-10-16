@@ -1,0 +1,31 @@
+public class Main {
+    public static void main(String[] args) {
+        PayrollSystem payrollSystem = new PayrollSystem();
+        FullTimeEmployee fullTimeEmployee1 = new FullTimeEmployee
+                ("Tanaya Verma", 15, 30000);
+        FullTimeEmployee fullTimeEmployee2 = new FullTimeEmployee
+                ("Divya Vatiyani", 13, 40000);
+        FullTimeEmployee fullTimeEmployee3 = new FullTimeEmployee
+                ("Chandani Mathur", 47, 60000);
+
+
+        PartTimeEmployee partTimeEmployee1 = new PartTimeEmployee
+                ("Dev Jaisingh", 56, 4, 200);
+        PartTimeEmployee partTimeEmployee2 = new PartTimeEmployee
+                ("Vijay Raj", 35, 2, 150);
+
+        payrollSystem.addEmployee(fullTimeEmployee1);
+        payrollSystem.addEmployee(fullTimeEmployee2);
+        payrollSystem.addEmployee(fullTimeEmployee3);
+
+        payrollSystem.addEmployee(partTimeEmployee1);
+        payrollSystem.addEmployee(partTimeEmployee2);
+
+        payrollSystem.displayEmployee();
+
+        System.out.println("-----------------------------------------");
+        payrollSystem.removeEmployee(56);
+
+        payrollSystem.displayEmployee();
+    }
+}
