@@ -1,0 +1,28 @@
+import java.util.ArrayList;
+
+public class PayrollSystem {
+   ArrayList<Employee> employeeList = new ArrayList<>();
+
+   public void addEmployee(Employee employee){
+       employeeList.add(employee);
+   }
+
+   public void removeEmployee(int id){
+       Employee employeeToRemove = null;
+       for(Employee i : employeeList){
+           if(i.getId() == id){
+               employeeToRemove = i;
+               break;
+           }
+       }
+       if(employeeToRemove != null){
+           employeeList.remove(employeeToRemove);
+       }
+   }
+
+   public void displayEmployee(){
+       for(Employee i : employeeList){
+           System.out.print(i + " ");
+       }
+   }
+}
