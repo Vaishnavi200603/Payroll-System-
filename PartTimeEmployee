@@ -1,0 +1,16 @@
+public class PartTimeEmployee extends Employee{
+    private int hoursWorked;
+    public double hourlyRate;
+
+    public PartTimeEmployee
+            (String name, int id, int hourlyWorked, double hourlyRate){
+        super(name, id);
+        this.hoursWorked = hourlyWorked;
+        this.hourlyRate = hourlyRate;
+    }
+
+    @Override
+    public double calculateSalary(){
+        return hourlyRate * hoursWorked * 30;
+    }
+}
